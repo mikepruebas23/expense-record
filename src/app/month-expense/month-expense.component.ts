@@ -31,7 +31,7 @@ export class MonthExpenseComponent implements OnInit {
   }
 
   si(){
-    alert('simon');
+    alert('simona');
   }
 
 }
