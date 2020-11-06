@@ -1,15 +1,25 @@
 
 <div class="addScroll">
-    <div class="row contenedor-cards mb-4 mx-2 mx-md-5 px-md-5">
-        <div *ngFor="let beneficio of beneficios" class="col-3">
+    <div class="fila contenedor-cards mb-4 mx-2 mx-md-5 px-md-5">
+        <div *ngFor="let person of persons" class="col-3">
             <div class="card text-center shadow">
-                <!-- <img class="rounded-circle mx-auto mt-1" [src]="beneficio.img" width="100" height="100"> -->
-                <div class="card-body" (click)="si()">
-                    <h5 class="card-title font-CircularStd-Bold text-wrap">{{ beneficio.title }}</h5>
-                    <p class="card-text text-wrap">{{ beneficio.description }}</p>
+                <div class="card-body">
+                    <h5 class="card-title font-CircularStd-Bold text-wrap">{{ person.title }}</h5>
+                    <p class="card-text text-wrap">{{ person.income }}</p>
+                    <p class="card-text text-wrap">{{ person.expenses }}</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="fila contenedor-cards mb-4 mx-2 mx-md-5 px-md-5">
+<div class="card text-center shadow">
+<div class="card-body">
+    <h5 class="card-title font-CircularStd-Bold text-wrap">titulo</h5>
+    <p class="card-text text-wrap">500</p>
+    <p class="card-text text-wrap">600</p>
+</div>
+</div>
 </div>
 
