@@ -1,11 +1,91 @@
-<section class="card">
+<!-- <section class="card">
     <div class="card-title">Titulo</div>
     <div class="card-content">Contenido</div>
+</section> -->
+<!-- <section class="value">
+    <div class="">Fecha inicial <strong>{{myDate | date: 'shortDate' }}</strong></div>
+    <div class="">Saldo inicial <strong>{{initExpense.initValue}} $</strong></div>
 </section>
-<br>
+
+<section class="unvalue">
+    <div class="">Fecha inicial <strong>{{myDate | date: 'shortDate' }}</strong></div>
+    <div class="">Saldo inicial <strong>{{initExpense.finalvalue}} $</strong></div>
+</section> -->
+
+<section class="two-cards">
+    <div class="card">
+        <div class="">Fecha Inicial <strong>{{myDate | date: 'shortDate' }}</strong></div>
+        <div class="">Saldo Inicial <strong>{{initExpense.initValue}} $</strong></div>
+    </div>
+    
+    <div class="card">
+        <div class="">Fecha Final <strong>{{myDate | date: 'shortDate' }}</strong></div>
+        <div class="">Saldo Final <strong>{{initExpense.finalvalue}} $</strong></div>
+    </div>
+</section>
+
+<mat-card class="card">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="row">
+            <div class="form-group form-content w40">
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Movimiento</mat-label>
+                    <mat-select formControlName="type">
+                        <mat-option *ngFor="let tm of typeMove" [value]="tm.value">{{tm.title}}</mat-option>
+                    </mat-select>
+                    <!-- <mat-error *ngIf="f.type.errors?.required">Campo <strong>requerido</strong></mat-error> -->
+                </mat-form-field>
+            </div>
+
+            <div class="form-group form-content w30">
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="name" maxlength="200" minlength="1">
+                </mat-form-field>
+            </div>
+
+            <div class="form-group form-content w28">
+                <mat-form-field class="w100" appearance="outline">
+                    <mat-label>Cantidad</mat-label>
+                    <!-- <input matInput formControlName="value" numbers-only maxlength="12" minlength="1"> -->
+                    <input matInput formControlName="value" maxlength="12" minlength="1">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="tac">
+            <button mat-raised-button color="primary" class="w100" [disabled]="disabledFormButton">
+                <!-- <span class="material-icons">add</span> -->
+                Agregar Registro
+            </button>
+        </div>
+
+    </form>
+</mat-card>
+
 <section class="card">
     <div class="card-title">Titulo</div>
-    <div class="card-content">Contenido</div>
+    <div class="row-record format-header">
+        <div>Fecha</div>
+        <div>Concepto</div>
+        <div>Cantidad</div>
+    </div>
+    <!-- <div class="card-content row-record" *ngFor="let d of myData" 
+    [ngClass]="{'green': d.typeMove === 1, 'red':d.typeMove === 2 
+    , 'yellow':d.typeMove === 3 , 'blue':d.typeMove === 4 }"> 
+        <div>{{d.date}}</div>
+        <div>{{d.name}}</div>
+        <div>{{d.value}} $</div>
+    </div> -->
+    <div class="card-content row-record format-header" *ngFor="let d of myData"> 
+        <div>{{d.date}}</div>
+        <div>{{d.name}}</div>
+        <div>{{d.value}} $</div>
+    </div>
 </section>
 <br>
-<app-month-expense></app-month-expense>
+
+
+<!-- <app-month-expense></app-month-expense> -->
+

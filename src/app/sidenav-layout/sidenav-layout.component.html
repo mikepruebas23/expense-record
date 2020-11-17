@@ -10,8 +10,12 @@
         </mat-toolbar-row>
       </mat-toolbar>
       <div>
-        <div (click)="drawer.toggle()"> <a mat-list-item routerLink="/home">Inicio</a></div>
-        <div (click)="drawer.toggle()"> <a mat-list-item routerLink="/personal-expense">Gasto Personal</a></div>
+        <div (click)="drawer.toggle()">
+          <a mat-list-item routerLink="/home"><span class="material-icons">event_note</span>Inicio</a>
+        </div>
+        <div (click)="drawer.toggle()">
+          <a mat-list-item routerLink="/personal-expense"><span class="material-icons">home</span>Gasto Personal</a>
+        </div>
       </div>
     </mat-nav-list>
 

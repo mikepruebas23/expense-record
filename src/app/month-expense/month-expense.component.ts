@@ -9,29 +9,30 @@ export class MonthExpenseComponent implements OnInit {
 
   constructor() { }
 
-  beneficios = [
+  months = [
     {
-      title:"Siempre cerca de ti",
-      description:"En nuestros más de 3,000 módulos de atención ubicados en las más de 1,500 tiendas Coppel y Zapatería Coppel Canadá de todo el país, a su servicio en el horario de las tiendas incluyendo sábados y domingos.",
+      month:"Siempre cerca de ti",
+      income: 200,
+      expense: 50
     },
     {
-      title:"Seguridad y confianza",
-      description:"Los recursos de su cuenta individual son administrados por personas expertas en inversiones.",
+      month:"Seguridad y confianza",
+      income: 300,
+      expense: 400
     },
     {
-      title:"Asesoría personalizada",
-      description:"Lo atendemos con la sencillez y amabilidad que usted conoce, brindándole información y asesoría para que obtenga todos los beneficios del sistema de pensiones.",
+      month:"Asesoría personalizada",
+      income: 50,
+      expense: 100
     },
     {
-      title:"Transparencia",
-      description:"Puede consultar su saldo en cualquier momento en nuestros módulos de atención o en nuestra página de Internet, además del envío a su domicilio de 3 estados de cuenta al año.",
+      month:"Transparencia",
+      income: 100,
+      expense: 95
     }
   ]
   ngOnInit(): void {
   }
 
-  si(){
-    alert('si');
-  }
   }
 

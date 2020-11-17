@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   myDate: any = new Date();
 
   constructor(private datePipe: DatePipe){
-      this.myDate = this.datePipe.transform(this.myDate, 'yyyy-MM-dd');
+    this.myDate = this.datePipe.transform(this.myDate, 'yyyy-MM-dd');
   }
 
   openSidenav(){  

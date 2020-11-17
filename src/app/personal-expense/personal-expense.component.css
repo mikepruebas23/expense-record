@@ -1,3 +1,29 @@
+.value{
+  background-color: #c0ffc6;
+  text-align: center;
+  width: 95%;
+  margin: 10px auto 0 auto;
+  border: 1px solid transparent;
+  border-color: #338828;
+  color: #338828;
+}
+.unvalue{
+  background-color: #ff857591;
+  text-align: center;
+  width: 95%;
+  margin: 10px auto 0 auto;
+  border: 1px solid transparent;
+  border-color: #d34141;
+  color: #d01a28;
+}
+.two-cards{
+  display: flex;
+}
+.two-cards > div{
+  width: 40%;
+}
+.two-cards > div:nth-child(1){background-color: #8aff95;}
+.two-cards > div:nth-child(2){background-color: #ff8575;}
 .card {
   width: 90%;
   margin: 0 auto;
@@ -10,3 +36,58 @@
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
 }
 
+.row
+{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  flex-direction: row;
+}
+.input-contacto{
+  width: 90%;
+}
+.w100{
+  width: 100%;
+}
+.w40{
+  width: 40%;
+}
+.w30{
+  width: 30%;
+}
+.w28{
+  width: 28%;
+}
+.tac{
+  text-align: center;
+}
+.row-record{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.plus-icon{
+  display: flex;
+  align-items: center;
+}
+.green{
+  background-color: #8aff95;
+  color: #1d8628;
+}
+.red{
+  background-color: #ff8575;
+  color: #c51a03;
+}
+.yellow{
+  background-color: #ffffb4;
+  color: #828410;
+}
+.blue{
+  background-color: #9fc3ffc2;
+  color: #526ed6;
+}
+.format-header{
+  background: #efefef;
+  border-bottom: 4px solid white;
+  /* border-radius: 12px; */
+}
